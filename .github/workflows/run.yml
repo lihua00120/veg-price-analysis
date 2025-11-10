@@ -40,7 +40,7 @@ jobs:
           pip install -r requirements.txt
        # ===== 以下為四個依序執行的腳本 =====
       - name: Run Step 1
-        run: python for_爬蟲.py
+        run: python for_crawler.py
 
       - name: Run Step 2
         run: python 菜價預測.py
