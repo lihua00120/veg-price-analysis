@@ -40,13 +40,13 @@
 #           pip install -r requirements.txt
 #        # ===== 以下為四個依序執行的腳本 =====
 #       - name: Run Step 1
-#         run: python for_crawler.py
+#         run: for_crawler.py
 
 #       - name: Run Step 2
-#         run: python 菜價預測.py
+#         run: price_prediction.py
 
 #       - name: Run Step 3
-#         run: python 聊天機器人.py
+#         run: chatbot.py
 
 #       # =====（可選）自動推送更新結果 =====
 #       - name:  Commit and push CSV results
