@@ -11,17 +11,6 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
 
-
-# 1. 安裝 selenium
-!pip install selenium
-
-# 2. 安裝 webdriver-manager 
-!pip install webdriver-manager
-
-# 3. 安裝 Chrome Driver
-!apt-get update
-!apt-get install -y chromium-browser
-
 URL = "https://www.khfv.com.tw/pagepub/AppContent.aspx?GP=GP04.01"
 
 response = requests.get(URL)
