@@ -29,28 +29,30 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-
+      
       - name: Set up Python
-        run: actions/setup-python@v4
-
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+          
       - name: Install dependencies
         run: |
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install -r requirements.txt
        # ===== 以下為四個依序執行的腳本 =====
       - name: Run Step 1
-        run: for爬蟲.ipynb
+        run: python for_爬蟲.py
 
       - name: Run Step 2
-        run: 菜價預測.ipynb
+        run: python 菜價預測.py
 
       - name: Run Step 3
-        run: 聊天機器人.ipynb
+        run: python 聊天機器人.py
 
       # =====（可選）自動推送更新結果 =====
-      - name: Commit and push result files
+      - name:  Commit and push CSV results
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "Auto update results"
+          git add veg_prices_history.csv veg_pred.csv
+          git commit -m "Auto update veg prices and predictions"
           git push
