@@ -38,16 +38,13 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
        # ===== 以下為四個依序執行的腳本 =====
       - name: Run Step 1
-        run: python script1.py
+        run: for爬蟲.ipynb
 
       - name: Run Step 2
-        run: python script2.py
+        run: 菜價預測.ipynb
 
       - name: Run Step 3
-        run: python script3.py
-
-      - name: Run Step 4
-        run: python script4.py
+        run: 聊天機器人.ipynb
 
       # =====（可選）自動推送更新結果 =====
       - name: Commit and push result files
