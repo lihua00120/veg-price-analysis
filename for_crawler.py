@@ -99,7 +99,7 @@ df_weighted = (
        })
        .rename(columns={'均價': '加權平均價(元/公斤)', '交易量(公斤)': '總交易量(公斤)'})
  )
-
+df_weighted['加權平均價(元/公斤)'] = df_weighted['加權平均價(元/公斤)'].round(6)
 df_weighted.head()
 
 df_weighted.to_csv('today_veg_prices.csv', index=False)
