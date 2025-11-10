@@ -38,6 +38,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
+          pip install statsmodels
        # ===== 以下為四個依序執行的腳本 =====
       - name: Run Step 1
         run: python3 for_crawler.py
