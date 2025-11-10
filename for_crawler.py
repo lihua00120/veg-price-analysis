@@ -102,7 +102,7 @@ df_weighted = (
 df_weighted['加權平均價(元/公斤)'] = df_weighted['加權平均價(元/公斤)'].round(6)
 df_weighted.head()
 
-df_weighted.to_csv('/tmp/today_veg_prices.csv', index=False)
+df_weighted.to_csv('today_veg_prices.csv', index=False)
 
 df_check= pd.read_csv('today_veg_prices.csv')
 #df = df.drop(columns=['Unnamed: 0'])
@@ -126,7 +126,7 @@ df_merged.head()
 len(df_merged)
 
 # 將合併後的 DataFrame 存回 CSV 檔案，直接覆蓋
-df_merged.to_csv('/tmp/veg_prices_history.csv',float_format="%.6f", index=False)
+df_merged.to_csv('veg_prices_history.csv',float_format="%.6f", index=False)
 
 print("合併後的資料已存回 veg_prices_history.csv")
 
