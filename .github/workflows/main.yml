@@ -46,8 +46,6 @@ jobs:
       - name: Run Step 2
         run: python3 price_prediction.py
 
-      - name: Run Step 3
-        run: python3 chatbot.py
 
       # =====（可選）自動推送更新結果 =====
       - name:  Commit and push CSV results
