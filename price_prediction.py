@@ -255,7 +255,7 @@ for name, group in grouped_by_product:
 
 # === 輸出結果到 CSV ===
 result_df = pd.DataFrame(predictions)
-result_df.to_csv("/tmp/veg_pred.csv", index=False, encoding="utf-8-sig")
+result_df.to_csv("veg_pred.csv", index=False, encoding="utf-8-sig")
 
 print("✅ 已完成，輸出veg_pred.csv")
 
