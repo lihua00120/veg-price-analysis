@@ -126,7 +126,7 @@ df_merged.head()
 len(df_merged)
 
 # 將合併後的 DataFrame 存回 CSV 檔案，直接覆蓋
-df_merged.to_csv('veg_prices_history.csv', index=False)
+df_merged.to_csv('veg_prices_history.csv',, float_format="%.6f", index=False)
 
 print("合併後的資料已存回 veg_prices_history.csv")
 
